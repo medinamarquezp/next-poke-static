@@ -1,19 +1,13 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import { Button } from "@nextui-org/react";
+import { Text } from "@nextui-org/react";
+import { MainLayout } from "../layouts/MainLayout";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>PokeAPP</title>
-        <meta name="description" content="PokeAPP" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <h1>Welcome to PokeAPP</h1>
-        <Button>Click me</Button>
-      </main>
+      <MainLayout>
+        <Text h2>Welcome to PokeApp</Text>
+      </MainLayout>
     </div>
   );
 };
