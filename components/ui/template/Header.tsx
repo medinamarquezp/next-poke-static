@@ -1,6 +1,6 @@
 import { Link, Navbar } from "@nextui-org/react";
-import { FavButton } from "../ui/buttons/FavButton";
-import { NavBrand } from "../brand/NavBrand";
+import { FavButton } from "../buttons/FavButton";
+import { NavBrand } from "../../brand/NavBrand";
 
 export const Header = () => {
   return (
