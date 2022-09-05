@@ -1,28 +1,18 @@
-import { Link, Button, Navbar, Text } from "@nextui-org/react";
-import { BrandIcon } from "../brand/BrandIcon";
+import { Link, Navbar } from "@nextui-org/react";
+import { FavButton } from "../ui/buttons/FavButton";
+import { NavBrand } from "../brand/NavBrand";
 
 export const Header = () => {
   return (
     <Navbar isBordered variant="static">
       <Link href="/">
         <Navbar.Brand>
-          <BrandIcon></BrandIcon>
-          <Text weight="bold" size="$2xl" css={{ marginLeft: "$2" }}>
-            PokeApp
-          </Text>
+          <NavBrand />
         </Navbar.Brand>
       </Link>
       <Navbar.Content>
         <Navbar.Link>
-          <Button
-            bordered
-            auto
-            size="md"
-            color="gradient"
-            css={{ textTransform: "uppercase", fontWeight: "$bold" }}
-          >
-            Favoritos
-          </Button>
+          <FavButton />
         </Navbar.Link>
       </Navbar.Content>
     </Navbar>
