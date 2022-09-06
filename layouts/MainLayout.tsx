@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren } from "react";
 import Head from "next/head";
-import { Container } from "@nextui-org/react";
 import { Header } from "../components/ui/template/Header";
 
 interface Props extends PropsWithChildren {
@@ -18,10 +17,8 @@ export const MainLayout: FC<Props> = ({ children, title, description }) => {
         <meta name="description" content={pageDescription} />
         <link rel="icon" href="/pokeball.svg" />
       </Head>
-      <Container fluid>
-        <Header />
-        {children}
-      </Container>
+      <Header />
+      {children}
     </>
   );
 };
