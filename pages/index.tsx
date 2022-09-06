@@ -3,10 +3,10 @@ import { Grid } from "@nextui-org/react";
 import { MainLayout } from "../layouts/MainLayout";
 import { PokemonCard } from "../components/ui/cards/PokemonCard";
 import { getPokemonList } from "../api/pokeapi/pokeapi.api";
-import { PokeApiListItems } from "../api/pokeapi/pokeapi.interfaces";
+import { ListItems } from "../api/pokeapi/pokeapi.interfaces";
 
 interface Props {
-  pokeList: PokeApiListItems[];
+  pokeList: ListItems[];
 }
 
 const Home: NextPage<Props> = ({ pokeList }) => {
@@ -24,7 +24,7 @@ const Home: NextPage<Props> = ({ pokeList }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const pokeList: PokeApiListItems[] = await getPokemonList(150);
+  const pokeList: ListItems[] = await getPokemonList(150);
   return {
     props: {
       pokeList,

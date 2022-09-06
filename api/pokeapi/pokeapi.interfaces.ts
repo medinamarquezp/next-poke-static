@@ -10,7 +10,7 @@ export interface Result {
   url: string;
 }
 
-export interface PokeApiListItems {
+export interface ListItems {
   id: number;
   name: string;
 }
