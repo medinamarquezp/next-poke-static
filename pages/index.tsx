@@ -1,10 +1,9 @@
 import type { GetStaticProps, NextPage } from "next";
 import { Grid } from "@nextui-org/react";
 import { MainLayout } from "../layouts/MainLayout";
-import { PokemonCard } from "../components/ui/cards/PokemonCard";
 import { getPokemonList } from "../api/pokeapi/pokeapi.api";
 import { ListItems } from "../api/pokeapi/pokeapi.interfaces";
-
+import { PokemonCard } from "../components/ui/cards/PokemonCard";
 interface Props {
   pokeList: ListItems[];
 }
