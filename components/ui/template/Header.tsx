@@ -12,7 +12,7 @@ export const Header = () => {
       </Link>
       <Navbar.Content>
         <Navbar.Link>
-          <FavButton />
+          <FavButton bordered={true} />
         </Navbar.Link>
       </Navbar.Content>
     </Navbar>

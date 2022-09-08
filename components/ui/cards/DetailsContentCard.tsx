@@ -1,6 +1,10 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Badge, Card, Col, Image, Row, Text } from "@nextui-org/react";
 import { FavButton } from "../buttons/FavButton";
+import {
+  toggleFavorite,
+  isInFavorites,
+} from "../../../services/favorites.service";
 
 interface Props {
   name: string;
@@ -14,6 +18,13 @@ export const DetailsContentCard: FC<Props> = ({
   abilities,
   imageList,
 }) => {
+  const [bordered, setBordered] = useState(!isInFavorites(name));
+
+  const toggleFav = () => {
+    toggleFavorite(name);
+    setBordered(!bordered);
+  };
+
   return (
     <Card style={{ padding: "1rem 2rem" }}>
       <Row>
@@ -47,6 +58,8 @@ export const DetailsContentCard: FC<Props> = ({
           <FavButton
             styles={{ float: "right", margin: "1rem 0rem" }}
             label="Agregar a favorito"
+            bordered={bordered}
+            onClick={toggleFav}
           />
         </Col>
       </Row>

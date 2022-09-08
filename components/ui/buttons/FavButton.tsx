@@ -6,14 +6,15 @@ interface Props {
   label?: string;
   styles?: object;
   onClick?: MouseEventHandler;
+  bordered?: boolean;
 }
 
-export const FavButton: FC<Props> = ({ onClick, label, styles }) => {
+export const FavButton: FC<Props> = ({ onClick, label, styles, bordered }) => {
   const buttonLabel = label || "Favoritos";
   return (
     <Button
-      bordered
       auto
+      bordered={bordered}
       size="md"
       color="gradient"
       css={{ ...styles, textTransform: "uppercase", fontWeight: "$bold" }}
