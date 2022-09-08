@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import confetti from "canvas-confetti";
 import { Badge, Card, Col, Image, Row, Text } from "@nextui-org/react";
 import { FavButton } from "../buttons/FavButton";
 import {
@@ -23,6 +24,18 @@ export const DetailsContentCard: FC<Props> = ({
   const toggleFav = () => {
     toggleFavorite(name);
     setBordered(!bordered);
+    if (bordered) {
+      confetti({
+        zIndex: 999,
+        particleCount: 100,
+        spread: 160,
+        angle: -100,
+        origin: {
+          x: 1,
+          y: 0,
+        },
+      });
+    }
   };
 
   return (
