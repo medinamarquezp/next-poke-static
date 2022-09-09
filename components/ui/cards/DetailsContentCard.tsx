@@ -8,12 +8,14 @@ import {
 } from "../../../services/favorites.service";
 
 interface Props {
+  id: number;
   name: string;
   specie: string;
   abilities: string[];
   imageList: string[];
 }
 export const DetailsContentCard: FC<Props> = ({
+  id,
   name,
   specie,
   abilities,
@@ -22,7 +24,7 @@ export const DetailsContentCard: FC<Props> = ({
   const [bordered, setBordered] = useState(!isInFavorites(name));
 
   const toggleFav = () => {
-    toggleFavorite(name);
+    toggleFavorite({ [name]: id });
     setBordered(!bordered);
     if (bordered) {
       confetti({

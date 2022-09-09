@@ -12,7 +12,7 @@ interface Props {
 }
 
 const PokemonDetail: FC<Props> = ({
-  pokeDetail: { name, specie, abilities, mainImage, imageList },
+  pokeDetail: { id, name, specie, abilities, mainImage, imageList },
 }) => {
   return (
     <MainLayout>
@@ -22,6 +22,7 @@ const PokemonDetail: FC<Props> = ({
         </Grid>
         <Grid xs={12} sm={8}>
           <DetailsContentCard
+            id={id}
             name={name}
             specie={specie}
             abilities={abilities}
