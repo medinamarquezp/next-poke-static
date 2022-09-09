@@ -11,7 +11,7 @@ export const Header = () => {
         </Navbar.Brand>
       </Link>
       <Navbar.Content>
-        <Navbar.Link>
+        <Navbar.Link href="/favorites">
           <FavButton bordered={true} />
         </Navbar.Link>
       </Navbar.Content>
