@@ -72,7 +72,7 @@ export const DetailsContentCard: FC<Props> = ({
         <Col>
           <FavButton
             styles={{ float: "right", margin: "1rem 0rem" }}
-            label="Agregar a favorito"
+            label={bordered ? "Agregar a favorito" : "En favoritos"}
             bordered={bordered}
             onClick={toggleFav}
           />
