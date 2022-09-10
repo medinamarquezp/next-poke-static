@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Card, Grid, Row, Text } from "@nextui-org/react";
 import Link from "next/link";
+import { Card, Grid, Row, Text } from "@nextui-org/react";
 
 interface Props {
   id: number;

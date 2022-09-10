@@ -28,3 +28,8 @@ export const toggleFavorite = (favorite: Favorite) => {
   }
   localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(favorites));
 };
+
+export const getFavorites = () => {
+  const favorites = getParsedFavorites();
+  return Object.entries(favorites);
+};
